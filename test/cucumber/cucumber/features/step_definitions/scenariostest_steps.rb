@@ -1,28 +1,41 @@
-Given(/^que o atleta de cpf "([^"]*)" esta cadastrado no sistema$/) do |arg1|
+# encoding: UTF-8
+
+Given(/^que eu quero apagar o cpf existente "([^"]*)" do sistema$/) do |arg1|
   pending
-  	#atletaExist = Atletas.find_by_cpf(arg1)
-  	#assert_nil atletaExist
+  #check('arg1')
+  #cpf = find_cpf_system(arg1)
+  #assert_nil cpf
+end
+
+When(/^eu clicar em remover o cpf "([^"]*)"$/) do |arg1|
+  pending
+  #find("bottom", match: :first).click
+end
+
+When(/^clico em "([^"]*)"$/) do |arg1|
+  pending
+  #find("bottom", match: :second).click
+end
+
+Then(/^a pagina de remoçao e atualizada sem nenhuma alteracao$/) do
+  pending
+  #visit('RemovePage')
+end
+
+Given(/^que o atleta de cpf "([^"]*)" nao possui classificacao$/) do |arg1|
+  pending
+  #check('arg1')
+  #classification = find_classification_system (arg1)
+  #assert classification
 end
 
 When(/^eu classifico o atleta de cpf "(\d+)" como "([^"]*)"$/) do |arg1, arg2|
   pending
-  	#classification = arg2
+  #find("li", match: "Júnior").click
 end
 
 Then(/^o sistema salva a classificacao do atleta de cpf "([^"]*)" como "([^"]*)"
 $/) do |arg1, arg2|
   pending
-  	#Atletas.set_classification(arg1, arg2)
-end
-
-Given(/^que eu quero remover o atleta de cpf "(\d+)" que nao existe no sistema$/) do |arg1|
-  pending
-end
-
-When(/^eu buscar o cpf "(\d+)" no sistema$/) do |arg1|
-  pending # Write code here that turns the phrase above into concrete actions
-end
-
-Then(/^o sistema emite uma mensagem "CPF nao existente\."$/) do
-  pending # Write code here that turns the phrase above into concrete actions
+  #set_classfication(arg1,arg2)
 end
